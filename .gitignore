@@ -1,0 +1,12 @@
+﻿__pycache__/
+*.py[cod]
+.venv/
+venv/
+.tmp/
+.ipynb_checkpoints/
+data/
+*.zip
+.DS_Store
+Thumbs.db
+!uts_dl_solution_colab_source.zip
+
