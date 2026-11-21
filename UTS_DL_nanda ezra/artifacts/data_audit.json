@@ -1,0 +1,117 @@
+{
+  "archive": "data_uts_dl.zip",
+  "datasheet": "# Kamus data UTS Deep Learning\n\nSemua kelompok menerima data yang sama. Label data uji tidak dibagikan.\n\n## Tugas 1: klasifikasi_train.npz, klasifikasi_test.npz, klasifikasi_*_meta.csv\n\nSatu sampel per unit produk dari pabrik komponen fiktif. Baris ke-i di berkas meta\nmemakai `indeks` = i pada array di berkas npz.\n\n| Isi | Keterangan |\n| --- | --- |\n| `gambar` | Array uint8 (N, 64, 64), foto permukaan produk |\n| `sensor` | Array float16 (N, 3, 128): suhu (C), getaran (relatif), arus (A) selama penekanan. NaN berarti data tidak terekam |\n| id_unit | ID unit produk |\n| lini | Lini produksi (A atau B) |\n| shift | Shift produksi |\n| id_mesin | Mesin penekan |\n| batch_material | Batch bahan baku |\n| kelas | Label: normal, gores, noda, retak, gelembung, las_dingin, kontaminasi. Hanya di data latih |\n\nLabel data latih berasal dari inspektur dan tidak dijamin bebas salah.\n\n## Tugas 2: rul_train.csv.gz dan rul_test.csv.gz\n\nLog per siklus untuk mesin press fiktif. Data latih berisi riwayat sampai mesin rusak.\nData uji berhenti pada titik acak sebelum rusak.\n\n| Kolom | Keterangan |\n| --- | --- |\n| id_unit | ID mesin |\n| siklus | Nomor siklus sejak mesin mulai dipakai |\n| setel_1, setel_2, setel_3 | Pengaturan operasi pada siklus itu |\n| s01-s21 | Bacaan sensor. NaN berarti bacaan hilang |\n\nLabel: sisa umur pakai (RUL) = jumlah siklus tersisa sampai rusak, dipotong pada 150\n(sisa umur di atas 150 siklus dihitung 150). Di data latih, siklus terakhir tiap unit adalah\nsiklus saat rusak, jadi labelnya dihitung sendiri. Prediksi RUL dibuat pada siklus terakhir\ntiap unit di data uji.\n\n## Tugas 3: clustering.npz dan clustering_meta.csv\n\nSampel material dari laboratorium fiktif, tanpa label.\n\n| Isi | Keterangan |\n| --- | --- |\n| `gambar` | Array uint8 (N, 64, 64), citra mikrostruktur dari mikroskop |\n| `spektrum` | Array float16 (N, 128), spektrum komposisi |\n| id_sampel | ID sampel |\n| mikroskop | Mikroskop yang dipakai (M1 atau M2) |\n",
+  "classification": {
+    "train_rows": 48000,
+    "test_rows": 16000,
+    "train_classes": {
+      "gelembung": 3430,
+      "gores": 5623,
+      "kontaminasi": 2357,
+      "las_dingin": 4323,
+      "noda": 4773,
+      "normal": 23888,
+      "retak": 3606
+    },
+    "line_class_counts": {
+      "A": {
+        "gelembung": 2577,
+        "gores": 4231,
+        "kontaminasi": 1777,
+        "las_dingin": 3250,
+        "noda": 3568,
+        "normal": 17862,
+        "retak": 2699
+      },
+      "B": {
+        "gelembung": 853,
+        "gores": 1392,
+        "kontaminasi": 580,
+        "las_dingin": 1073,
+        "noda": 1205,
+        "normal": 6026,
+        "retak": 907
+      }
+    },
+    "train_line_fraction": {
+      "A": 0.74925,
+      "B": 0.25075
+    },
+    "test_line_fraction": {
+      "B": 0.6004375,
+      "A": 0.3995625
+    },
+    "sensor_shape": [
+      48000,
+      3,
+      128
+    ],
+    "sensor_nan_fraction": 0.059493055555555556,
+    "sensor_rows_with_any_nan_fraction": 0.08047916666666667,
+    "sensor_all_nan_rows": 2352,
+    "image_shape": [
+      48000,
+      64,
+      64
+    ],
+    "test_image_shape": [
+      16000,
+      64,
+      64
+    ]
+  },
+  "rul": {
+    "train_rows": 254174,
+    "test_rows": 51692,
+    "train_machines": 900,
+    "test_machines": 300,
+    "train_missing_fraction": 0.016378846471617567,
+    "test_missing_fraction": 0.016154114012583407,
+    "train_last_cycle_quantiles": {
+      "0.0": 133.0,
+      "0.25": 224.0,
+      "0.5": 265.0,
+      "0.75": 323.0,
+      "1.0": 778.0
+    },
+    "train_sensor_std": {
+      "s01": 17.760139778436304,
+      "s02": 15.928711538305237,
+      "s03": 23.053622789477252,
+      "s04": 17.62483114523444,
+      "s05": 9.488940034986731,
+      "s06": 8.694584095399057,
+      "s07": 6.82737325709261,
+      "s08": 6.858937584047914,
+      "s09": 25.15730171974367,
+      "s10": 17.415642831147565,
+      "s11": 16.134766219951167,
+      "s12": 6.296168759290444,
+      "s13": 26.33060484444264,
+      "s14": 15.775595363063218,
+      "s15": 8.30459663180109,
+      "s16": 23.93701362563223,
+      "s17": 11.514307392411236,
+      "s18": 30.52347700055353,
+      "s19": 21.920824283474293,
+      "s20": 45.42599357303879,
+      "s21": 33.903152693775624
+    }
+  },
+  "clustering": {
+    "samples": 36000,
+    "microscope_counts": {
+      "M1": 21636,
+      "M2": 14364
+    },
+    "image_shape": [
+      36000,
+      64,
+      64
+    ],
+    "spectrum_shape": [
+      36000,
+      128
+    ]
+  }
+}
