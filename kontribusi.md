@@ -23,8 +23,8 @@ Setiap anggota harus membaca keterangan penggunaan AI di atas dan mengisi perset
 
 | Anggota | Persetujuan penggunaan AI | Tanggal persetujuan |
 |---|---|---|
-| Nanda Pratama Itma (101032330212) | Belum dikonfirmasi | Belum diisi |
-| Ezra Daiva Keitaro (1103223200) | Belum dikonfirmasi | Belum diisi |
+| Nanda Pratama Itma (101032330212) | setuju | 20-11-2026 |
+| Ezra Daiva Keitaro (1103223200) | setuju| 20-11-2026 |
 
 ## Status sebelum pengumpulan
 
