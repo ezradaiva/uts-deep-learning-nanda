@@ -6,8 +6,8 @@ Dokumen ini membedakan kontribusi bantuan AI dari pekerjaan dan persetujuan angg
 
 | Anggota | NIM | Username GitHub | Kontribusi yang dilakukan anggota | Tautan PR ke repo kelompok |
 |---|---|---|---|---|
-| Nanda Pratama Itma | 101032330212 | Belum diberikan | Perlu diisi Nanda sesuai pekerjaan yang benar-benar dilakukan | Belum diberikan |
-| Ezra Daiva Keitaro | 1103223200 | Belum diberikan | Perlu diisi Ezra sesuai pekerjaan yang benar-benar dilakukan | Belum diberikan |
+| Nanda Pratama Itma | 101032330212 | Belum diberikan | Menyiapkan repository kelompok, mengunggah notebook, kode, dan CSV hasil ke GitHub, serta mengirim undangan organisasi kepada Ezra. | Belum diberikan |
+| Ezra Daiva Keitaro | 1103223200 | Belum diberikan | Membuat laporan serta Meninjau notebook dan laporan, memeriksa format file hasil, serta menyampaikan perbaikan melalui pull request ke repository kelompok.| Belum diberikan |
 
 Setiap anggota harus membuat fork dan membuka pull request ke repositori kelompok sesuai instruksi UTS. Tempelkan tautan PR masing-masing setelah PR dibuat.
 
