@@ -1,35 +1,35 @@
 # Kontribusi Anggota dan Penggunaan AI
 
-Dokumen ini mencatat kontribusi yang dapat diverifikasi dari berkas dan aktivitas repository. Pekerjaan yang belum dikonfirmasi tidak dicatat sebagai pekerjaan selesai.
+Dokumen ini merangkum kontribusi yang tercatat di repository dan bantuan AI yang digunakan. Setiap anggota tetap bertanggung jawab memahami kode, hasil, dan laporan yang dikumpulkan.
 
-## Identitas dan kontribusi
+## Identitas, kontribusi, dan pull request
 
-| Anggota | NIM | Akun GitHub | Kontribusi yang tercatat | Tautan dan status PR |
+| Anggota | NIM | Akun GitHub | Kontribusi yang tercatat | Pull request ke repository kelompok |
 |---|---:|---|---|---|
-| Nanda Pratama Itma | 101032330212 | `nandapratama823` | Mengatur pengerjaan kelompok, menyiapkan alur Google Colab dan berkas hasil, membuat repository kelompok, mengunggah berkas proyek ke GitHub, serta mengirim undangan organisasi kepada Ezra. Kode, analisis, dan draf laporan disusun dengan bantuan AI dan perlu ditinjau serta dipahami oleh anggota kelompok. | [PR #2](https://github.com/nanda-ezra-deeplearning/uts-deep-learning-nanda/pull/2) mengajukan perubahan `kontribusi.md` dari branch `perbaikan-laporan` ke `main` di repository organisasi. Status: **terbuka, belum digabung**. PR ini dibuat dari branch repository organisasi, bukan dari fork pribadi. [PR #1](https://github.com/nandapratama823/uts-deep-learning-/pull/1) pada repository pribadi Nanda sudah ditutup dan bukan PR ke repository kelompok. |
-| Ezra Daiva Keitaro | 1103223200 | Belum dikonfirmasi | Nanda melaporkan telah mengirim undangan organisasi GitHub. Penerimaan undangan dan pekerjaan Ezra pada proyek belum dapat diverifikasi. Ezra perlu menuliskan hanya pekerjaan yang benar-benar telah ia lakukan. | Tautan PR Ezra belum dikonfirmasi. Jika instruksi UTS mewajibkan PR masing-masing anggota, tambahkan tautan setelah PR Ezra dibuat ke repository kelompok. |
+| Nanda Pratama Itma | 101032330212 | `nandapratama823` | Menyiapkan repository kelompok dan alur Google Colab; mengunggah notebook, kode, CSV hasil, dan laporan; serta mengirim undangan organisasi kepada Ezra. | [PR #2](https://github.com/nanda-ezra-deeplearning/uts-deep-learning-nanda/pull/2) — **merged**. PR dibuat dari branch `perbaikan-laporan` pada repository organisasi, bukan dari fork pribadi Nanda. |
+| Ezra Daiva Keitaro | 1103223200 | `ezradaiva` | Meninjau notebook dan laporan, memeriksa format file hasil, serta menyampaikan usulan perbaikan. | [PR #1](https://github.com/nanda-ezra-deeplearning/uts-deep-learning-nanda/pull/1) — **merged** dari fork Ezra. |
 
 ## Penggunaan AI
 
-- **Alat yang digunakan:** OpenAI Codex.
-- **Bantuan AI:** membantu membaca instruksi dan datasheet; menyusun dan memperbaiki pipeline klasifikasi multimodal, prediksi remaining useful life (RUL), dan clustering; menyiapkan notebook Colab; serta membantu analisis hasil, README, panduan penjelasan, dan draf laporan.
-- **Pemeriksaan lokal:** berkas prediksi yang diperiksa berisi 16.000 baris klasifikasi, 300 baris RUL, dan 36.000 baris clustering. Pemeriksaan ini tidak membuktikan skor pada hidden test.
-- **Batas evaluasi:** arsip yang tersedia tidak memuat label hidden test klasifikasi atau label acuan material. Karena itu, hidden-test score dan ARI tidak dapat dihitung dari arsip lokal. Eksekusi ulang versi notebook yang persis sama dengan versi di repository juga belum diverifikasi.
-- **Tanggung jawab kelompok:** setiap anggota perlu meninjau kode, memahami metode dan hasil, serta mampu menjelaskan pekerjaan yang dikumpulkan.
+- **Alat:** OpenAI Codex.
+- **Bagian yang dibantu:** membaca instruksi UTS dan datasheet; membantu menyusun pipeline PyTorch untuk klasifikasi multimodal, prediksi Remaining Useful Life (RUL), dan clustering; menyiapkan notebook Colab; serta membantu menyusun README, analisis hasil, dan draf laporan.
+- **Pemeriksaan yang tercatat:** CSV prediksi berisi 16.000 baris klasifikasi, 300 baris RUL, dan 36.000 baris clustering. Pemeriksaan jumlah baris dan format tidak membuktikan skor hidden test.
+- **Batas evaluasi:** label hidden test klasifikasi dan label acuan material tidak tersedia dalam arsip yang diperiksa. Karena itu, macro-F1 hidden test dan ARI tidak bisa dihitung secara lokal.
+- **Tanggung jawab kelompok:** anggota harus meninjau hasil, memahami metode, dan mampu menjelaskan proyek saat ujian lisan.
 
 ## Persetujuan penggunaan AI
 
-Setiap anggota harus membaca keterangan penggunaan AI di atas dan mengisi persetujuannya sendiri. Persetujuan anggota lain tidak boleh diisikan oleh Nanda atau Codex.
+Status berikut tercatat pada dokumen kontribusi sebelumnya. Setiap anggota perlu memastikan sendiri bahwa persetujuan dan tanggalnya benar.
 
-| Anggota | Persetujuan penggunaan AI | Tanggal persetujuan |
+| Anggota | Persetujuan penggunaan AI | Tanggal |
 |---|---|---|
-| Nanda Pratama Itma (101032330212) | setuju | 20-11-2026 |
-| Ezra Daiva Keitaro (1103223200) | setuju| 20-11-2026 |
+| Nanda Pratama Itma (101032330212) | Setuju | 20-11-2026 |
+| Ezra Daiva Keitaro (1103223200) | Setuju | 20-11-2026 |
 
-## Status sebelum pengumpulan
+## Status kelengkapan
 
-1. PR Nanda #2 masih terbuka. Setelah isi dokumen diperiksa dan PR digabung ke `main`, perbarui status PR menjadi **digabung**.
-2. Konfirmasi apakah instruksi UTS mewajibkan setiap anggota membuat fork pribadi. PR #2 saat ini berasal dari branch repository organisasi, bukan fork.
-3. Ezra perlu mengonfirmasi username GitHub, kontribusi aktual, status undangan organisasi, dan tautan PR bila diwajibkan.
-4. Masing-masing anggota harus mengisi persetujuan dan tanggalnya sendiri setelah membaca pengungkapan penggunaan AI.
-5. Pastikan laporan dan CSV yang dikumpulkan merupakan hasil terbaru dari notebook Colab.
+- Berkas utama yang dipersyaratkan sudah tersedia di branch `main`: `laporan.pdf`, folder `kode/`, tiga CSV prediksi, dan `kontribusi.md`.
+- Laporan Word dan PDF diperbarui di `main` pada commit [440e9a1](https://github.com/nanda-ezra-deeplearning/uts-deep-learning-nanda/commit/440e9a10372c5f376d8cf0cc18adf23b7d9f2d54).
+- PR Ezra #1 dan PR Nanda #2 sudah berstatus merged.
+- **Catatan syarat fork:** PR Ezra berasal dari fork pribadi. PR Nanda #2 berasal dari branch repository organisasi, bukan fork pribadi. Jika dosen menerapkan syarat fork untuk masing-masing anggota secara ketat, kontribusi Nanda belum memenuhi bagian alur fork tersebut.
+- Jalankan ulang notebook yang ada di repository dengan dataset kelompok dan pastikan angka dalam laporan cocok dengan hasilnya. Nilai macro-F1 hidden test dan ARI hanya dapat dinilai oleh pengajar yang memiliki label acuan.
